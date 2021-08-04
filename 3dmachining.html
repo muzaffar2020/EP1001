@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>D1000</title>
+        <title>EP1001</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
         
     </head>
@@ -8,7 +8,7 @@
     
         <div id="container">
             <div id="header">
-                <h1>D1000</h1>
+                <h1>EP1001</h1>
             </div>
             <div id="content">
                 <div id="nav">
@@ -29,57 +29,44 @@
                 </div>
                 
                 <div id="main">
-                 <h2>3D Printing:</h2>
-                    3d printing is a technology that allows you to print physical models from digitally made models. All you need to do is to create a deisgn in a software like Fusion360, then slice the model before transfering it to the printer. Here in SP, we mostly use the Cura Ultimaker 2+ which thankfully is easy to use. Below, you can see an image of the printer taken from the Dfab github which shows you all the parts that are found on it. </br>
-                    <img src="images/ultimaker.png" width="380" lenght="180" /></br> 
-                
-            <br><h3>Bridging</h3>
-Bridging is used to test the 3d printer's ability to print layers between a gap without any support. In this case, I set the gap size from 10 to 25mm. From my previous experience using 3d printers, the printer already starts to struggle at the 10mm mark, with failure at the 25mm mark.</br>
-<img src="images/bridge1.png" width="380" lenght="180" />
-        <img src="images/bridge2.png" width="380" lenght="180" /></br>
-<img src="images/bridge3.png" width="380" lenght="180" />
-        <img src="images/bridge4.png" width="380" lenght="180" /></br>
-<img src="images/bridge5.png" width="380" lenght="180" /></br>
- <a href="downloads/bridging.f3d" download> (Click to download file) </a> </br>      
-<br><h3>Overhang</h3>
-Overhang is to test the 3d printer's ability to print at extreme angles. This will enable you to find its angle limit. Usually, as long as the overhang does not exceed 45 degrees, the model should be able to be printed without the use of support structures. Here I created a simple overhang test from watching a tutorial on Youtube. It goes from 30 to 70 degrees.</br>
-<img src="images/OVERHANG.png" width="380" lenght="180" /></br>
-<a href="downloads/overhang%20angle%20test.f3d" download> (Click to download file) </a> </br> 
- <br><h3>Infill Density</h3>   
-Infill density is the material that fills the inside walls of your structure. A higher infill creates a stronger but heavier print. We usually use 20% - 25% infill densities because they have a nice strength to weight ratio. Some printers can even create intricate patterns from honey combs to even spirals.</br>
-<img src="images/infill.png" width="380" lenght="180" /></br>(Taken from my3dmatter.com)
-</a></br> 
- <br><h3>Clearance</h3>                           
-  Clearance is crucial especially when creating movable joints such as hinges. Making the clearance too small will fuse the parts together. So it is common to put a clearance of at least 0.5mm. As an example, below is a hinge that I had designed for my final project. I gave it a tolerance of 0.6mm and it works amazingly. However, too much clearance will cause a lot of play which will damage your workpiece. </br>
-<img src="images/hinge.png" width="380" lenght="180" />
-        <img src="images/clearance.png" width="380" lenght="180" /></br>
+                 <h2>3D Machining</h2>
+                    <h3>Assignment</h3>
+                 <p>We had to create a design in Fusion 360, 50mm by 50mm. Due to time constraints, I decided to create something simple.</br>
+        For the design, I wanted to make a flower design. So I started by making the base first before the actual design of the flower. </br>
+    <img src="images/mold1.png" width="400" lenght="200" /> 
+<img src="images/mold2.png" width="400" lenght="200" /></br>
+        
+        <p>As for the walls, I designed them to be slanted so that it would be easier to remove the mold later on. </br>
+        <img src="images/mold3.png" width="400" lenght="200" /> 
+<img src="images/mold4.png" width="400" lenght="200" /></br>
+        <p>Moving onto the design of the flower itself. I started by sketching the main circle before revolving it 180 degrees to form a semi-sphere.</br>
+        <img src="images/mold5.png" width="400" lenght="200" /> 
+<img src="images/mold6.png" width="400" lenght="200" /></br>
+        <p>As for the petals, I sketched 5 circles that surrounded the main circle equally. I did so by using the circle pattern function. I then revolved them, similarly to the main circle.  </br>
+            
+ <img src="images/mold7.png" width="400" lenght="200" />           
+<img src="images/mold8.png" width="400" lenght="200" /></br>
+<p>Afterwards I had to smoothen out the lines between the shapes. This is due to the tool being 3mm in diameter. I did so by simply using the fillet function.</br>
+
+   <img src="images/mold9.png" width="400" lenght="200" /></br>
+<p>Next, I did the toolpath for the milling of the mold. I had to do two separate toolpaths, one for the flower, and one for the sloping sides.  </br>
+
+<img src="images/cnc1.png" width="400" lenght="200" />           
+<img src="images/cnc2.png" width="400" lenght="200" /></br>
+
+<p>Here are the settings that I used. Usually we would use 0.3mm for the fine step down but since I wanted to mill the mold in one go, I decided to make it cut finer at 0.1mm. </br>
+<img src="images/cnc4.png" width="200" lenght="50" /></br>
+
+
+
+<p>Moving on, I used the 2d cnc machine to mill the mold. To do so, I loaded the nc file generated from fusion and used the 3mm flat endmill for the milling process. I did have to consistantly vacuum up the dust from the foam to not make a mess. 
+   <img src="images/mold13.jpg" width="400" lenght="200" />           
+<img src="images/mold10.jpg" width="400" lenght="200" /></br> 
+    
+    <p>As you can see here it turned out great but it took a pretty long time to complete. About 1hr, due to it being a finer and single cut. I will try to tweak the toolpath next time so that the toolpath will not cut the sides of the top. Overall, it was pretty good for my first time trying 3d machining.   </br>
                             
-                    
-<p><h3>Assignment 1</h3>
- Firstly, I started with sketching a box, 23mm in width and length before extruding upwards by 23mm.
-        <img src="images/cube1.png" width="380" lenght="180" />
-        <img src="images/cube2.png" width="380" lenght="180" /></br>            
-        Then I played around with a couple shapes and ended up choosing a hexagon for the six sides. So I sketched out the hexagons using the inscribed polygon function at 9.5mm. I did so to allow enough space from the edge to give it structural stiffness. Then I extruded inwards for all the hexagons.</br>           
-        <img src="images/cube3.png" width="380" lenght="180" />
-        <img src="images/cube4.png" width="380" lenght="180" /></br>
-        For this step I copied the cube and rotated it. I did this step one more time. However I found out that when I rotated the cubes, it would move away from the original cube due to its rotational axis. So I had to manually move the 2 copied cubes to align them up as centred as possible.</br>   
-        <img src="images/cube5.png" width="380" lenght="180" />
-        <img src="images/cube6.png" width="380" lenght="180" /></br>
-        At this point I felt as if the cube was just too pointy. So I used the chamfer and extrude function all over the cube. I do admit that I also did this to lower the printing time but it made almost no difference.</br>
-        <img src="images/cube7.png" width="380" lenght="180" />
-        <img src="images/cube8.png" width="380" lenght="180" /></br>
-    The end product does look really messy but I ensure you that once it is printed, it would look much better. Below are some of the side profiles of the cube. I must say that they look pretty good to me. Also, this cube of mine is coincidently similar to one of my classmates. We must have watched similar videos or something haha.</br>
-     <img src="images/cube9.png" width="380" lenght="180" />
-        <img src="images/cube10.png" width="380" lenght="180" /></br>
-        <img src="images/cube11.png" width="380" lenght="180" /></br>
-<a href="downloads/cubethingv3.stl" download> (Click to download file) </a></br>
-So here is the finish product. Took me awhile to clear the support from the inside. I could barely fit a needle nose plier inside it. But overall, I felt that it turned out great. Looks alot like a durian which was indeed my inspiration for this assignment.
-<img src="images/3dthang.jpg" width="380" lenght="180" />
-        <img src="images/3dthang2.jpg" width="380" lenght="180" /></br>           
- <p><h3>Assignment 2</h3>
-For this assignment, we had to slice our chess knight model in cura and see how long it takes to print. For the printer settings, I used 20% infill, 60m/s print speed, support everywhere and skirt build plate adhesion. All these takes the printer 44 minutes to print, using 0.61m of material at 5 grams.</br>
-<img src="images/knighter.png" width="380" lenght="180" /></br>
-<a href="downloads/KNIGHT v1.stl" download> (Click to download file) </a>
+      <img src="images/mold11.jpg" width="400" lenght="200" />           
+<img src="images/mold12.jpg" width="400" lenght="200" /></br>   
 
                             
                            
