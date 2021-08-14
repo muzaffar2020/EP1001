@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>D1000</title>
+        <title>EP1001</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
         
     </head>
@@ -8,7 +8,7 @@
     
         <div id="container">
             <div id="header">
-                <h1>D1000</h1>
+                <h1>EP1001</h1>
             </div>
             <div id="content">
                 <div id="nav">
@@ -30,9 +30,7 @@
                 
                 <div id="main">
                     <h2>Embedded Programming:</h2>
-                    <h3>Arduino Uno</h3>
-                    <img src="images/arduino_uno.jpg" width="400" lenght="200" /></br>
-                <p>The Arduino Uno is an open-source microcontroller board based on the Microchip ATmega328P microcontroller and developed by Arduino.cc. The board is equipped with sets of digital and analog input/output pins that may be interfaced to various expansion boards and other circuits.</br>
+                   </br>
                 <h3>Input devices</h3>
             An input device is any equipment that is used to input data and signals to an information processsing system in this case, the Arduino board. An example would be a toggle switch. It inputs either a 0 or 1 into the circuit based on its position. A simple example would be an on-off button. </br>
         Here are a few more examples:
@@ -56,23 +54,43 @@
         
                     </ul>
                        <h3>Assignment</h3>
-       <p> After searching through the internet for a simple arduino circuit, I choose a cicuit that is able to light up a single LED with a push button.
-   This took me awhile to do eventhough it may seem very simple. This is my first time using Arduino and I must say that I am very happy for the results ive gotten.</br>     
-   <p> The Code:</br>   
-            <img src="images/arduino1.png" width="700" lenght="500" /></br> 
-        <a href="downloads/Simplearduino1.ino" download> (Click to download file) </a>
-    <p> How program works: </br>
-    After stating the various pins and their outputs and inputs, I created a void loop with an if else statement inside. When I click on the pushbutton, the pushbutton's state will be low, which will in this case make the led state high. This turns on the led. However, as I release the pushbutton, the led turns off. This is due to the else statement which states that unless the button' state is low, the led will not light up. </br>  
-    <p> Circuit in Thinkercad: </br>
-<img src="images/arduino4.png" width="500" lenght="300" />
-<p> Pictures of circuit: </br>
-<img src="images/arduino2.jpg" width="400" lenght="200" />
-<img src="images/arduino3.png" width="400" lenght="200" /></br>
-    <p> Video of circuit working: </br> 
-    <video width="640" height="360" controls  >
-<source src="images/arduino.mp4" type="video/mp4">
+       <p> For this assignment, I was tasked to read a microcontroller data sheet and program my board to do something. Since I had already milled and soldered my board for my final project, I decided to use it to demonstrate it here. I will be talking about the ATtiny412 since that is the board that I will be using in my project.</br>     
+     
 
-</video >
+
+<p>Below you will be able to see the datasheet and pin configuration for the ATtiny412. The images and information below are credited to Spence Konde as well as Noora Nyberg and Adrian Torres from Fablab Academy.  </br> 
+            <img src="images/attiny412data1.jpg" width="300" lenght="200" />             <img src="images/attiny412data.jpg" width="700" lenght="500" /></br> 
+
+ The Board consists of only 8 pins but still packs a punch. It has 
+    <ul>
+                        
+                        <li>Max voltage of 6V, Min voltage of -0.5V</li>
+                        <li>A 16 MHz internal clack</li>
+                        <li>A 20MHz internal clock</li>
+                        <li>256 B SRAM</li>
+                    <li>128 B EEPROM</li>
+        
+                    </ul>
+    <p>From the pin configuration above, you can see that pins available are: </br>  
+
+ <ul>
+                        
+                        <li>VCC: Power Supply</li>
+                        <li>GND: Ground</li>
+                        <li>Digital pins: PA0, PA1, PA2, PA3, PA4, PA5, PA6.</li>
+                        <li>Analog pins: PA1, PA2, PA3, PA4, PA5, PA6.</li>
+                    <li>UPDI Programming pin: PA0</li>
+                    <li>External Clock Pin: PA3</li>
+                    </ul>
+    <p>For my board programming, I wanted to test if my board's connection was good. So I connected the servo and updi programmer to my board before connecting to my computer. As for the code I used the example sweep servo code in the Arduino programmer. I used a code for arduino uno but just changed the pin number in the coding from 9 to 4 since I designed my servo to use the analog 4 pin on the ATtiny412.  </br>  
+    <p> Circuit in Thinkercad: </br>
+    <img src="images/servo%20code.png" width="600" lenght="400" /> </br>
+<video width="540" height="280" controls  >
+    <source src="images/servo.mp4" type="video/mp4"></br> 
+<p>I also wanted to test the I2C LCD so I connected it to my board and updi programmer before connecting to my computer. For the code I used the example LiquidCrystal code that I found online. It took quite some time for the code to work because my laptop was having problems. I think the thickness of the FTDI board was also slightly too thin, casuing the connection to not be too good.   </br>  
+
+    <img src="images/i2c_code.PNG" width="600" lenght="400" /> </br>
+<img src="images/lcd%203.jpg" width="500" lenght="400" /> 
                             
                            
                             
