@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>D1000</title>
+        <title>EP1001</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
         
     </head>
@@ -8,7 +8,7 @@
     
         <div id="container">
             <div id="header">
-                <h1>D1000</h1>
+                <h1>EP1001</h1>
             </div>
             <div id="content">
                 <div id="nav">
@@ -29,30 +29,16 @@
                 </div>
                 
                 <div id="main">
-                   <h2>Laser cutting</h2>
-                    Laser cutting is a fabrication process that uses a thin, focused laser beam to cut and etch materials such as acrylic and plywood into custom designs that are created by the designer. This enables it to create intricate parts that would have needed special tools and equipment. You can also program the machine to engrave designs on the surface of the material. These methods are widely used in this module to create our parts. The machine used in SP is simlar to the one shown here. </br>
-                <img src="images/lasercutter.jpg" width="380" lenght="180" /></br>
-        
-                    
+                   
+  
                     <p><h3>Assignment</h3>
-            For the assignment, I created a small box, 35x35x35mm which used finger connectors. These were designed specifically to ensured that the panels would fit tightly.</br>
-                    <img src="images/cutter1.png" width="380" lenght="180" />
-        <img src="images/cutter2.png" width="380" lenght="180" /></br>
-    After finishing the initial sketch, I extruded the drawing by 3mm, following the thickness that was given to me by my lecturers. I then decided to draw a simple pattern onto the surface to spice things up before extruding by-3mm. </br>
-        <img src="images/cutter3.png" width="380" lenght="180" />
-        <img src="images/cutter4.png" width="380" lenght="180" /></br>
- I continued doing the same process for the other sides of the box and added the 3 different sides into one file.</br>
-        <img src="images/cutter5.png" width="380" lenght="180" />
-        <img src="images/cutter6.png" width="380" lenght="180" /></br>
-It took me awhile to figure out how to join the parts together. But first I had to duplicate the parts by simply by using the copy and paste functions. Then I used the move function to move the panels into place.</br>
-        <img src="images/cutter7.png" width="380" lenght="180" />
-    <img src="images/cutter8.png" width="380" lenght="180" /></br>
-Im quite happy with how the final product turned out. Now all thats left is to transfer the individual parts to autocad to be laser cut. </br>
-         <img src="images/cutter9.png" width="380" lenght="180" /></br>
-Here are the parts after the cut. It was fairly easy to put together. Thanks to the tolerance I gave in my drawing, the box was able to be put together by press fit without any glue. </br> 
-         <img src="images/cutter10.png" width="380" lenght="180" />   
-<img src="images/cutter11.jpg" width="380" lenght="180" /></br> 
-
+           <p>Unfortunately, I did not have much time to spare for this assignment to write my own coding or even do the physical connections to my hello board as it was damaged by the rain. Fortunately, I found a preset code online.  <a href="https://www.arduino.cc/en/Tutorial/BuiltInExamples/PhysicalPixel">(Click here to go to PhysicalPixel Code for Arduino-Processing)</a></br> </br>
+                    <img src="images/iocoding.PNG" width="380" lenght="180" /></br>
+        <img src="images/iocoding2.PNG" width="380" lenght="180" /></br>
+   <p> I had to modify the coding a little to suite a Attiny412 board. the rx and tx connections were to be connected using the analog 1 and 2 pins since they were already integrated in the Attiny412. I also had to add SoftwareSerial.h and change all Serial commands to mySerial. This was advice from Gabriel's website. 
+   <p>So how this coding works is that when you mouse is over the grey box, it will turn on the led on the pcb board. Moving the mouse away will turn off the led.</br>
+    <img src="images/led%20box.PNG" width="380" lenght="180" /></br>
+    <p>It would have been great to be able to do this physically as it looked really caught my eye when Mr Steven was demoing how these kinds of programs worked. It was just really unfortunate that I was caught in the rain and the shoebox that I put the board in got soaked may have damaged my board or shorted it one way or another. Hopefully I will be able to come back to the fablab and try this out physically in the time to come.</br>
                             
                            
                             
